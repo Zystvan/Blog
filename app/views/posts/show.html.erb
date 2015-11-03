@@ -1,0 +1,13 @@
+<main>
+  <article>
+    <h1><%= @post.title %></h1>
+    <p><%= @post.content %></p>
+  </article>
+  <section>
+    <h1>Comments</h1>
+    <%= @post.comments.each do |comment| %>
+      <p><%= comment.content %></p>
+    <% end %>
+    <%= render '/comments/comments_form' %>
+  </section>
+</main>
